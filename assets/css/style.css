@@ -30,6 +30,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* ----- SMOOTH SCROLL ----- */
 html {
     scroll-behavior: smooth;
