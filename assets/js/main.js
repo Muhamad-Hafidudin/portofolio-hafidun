@@ -63,11 +63,6 @@ sr.reveal('.service-box',{interval: 200})
 /* -- PROJECT BOX -- */
 sr.reveal('.project-box',{interval: 200})
 
-function viewProject(projectName) {
-  alert("Viewing " + projectName);
-  // Anda bisa mengganti alert dengan logika lain seperti membuka halaman detail proyek
-}
-
 /* -- HEADINGS -- */
 sr.reveal('.top-header',{})
 
@@ -95,7 +90,12 @@ reset: true
 srRight.reveal('.skills-box',{delay: 100})
 srRight.reveal('.form-control',{delay: 100})
 
-
+// CLEAR FORM BEFORE UNLOAD
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
+  }
+};
 
 /* ----- CHANGE ACTIVE LINK ----- */
 
